@@ -7,7 +7,7 @@ resource "aws_instance" "hello-world" {
 	ami = "ami-0f36dcfcc94112ea1"
 	instance_type = "t2.micro"
 	tags = {
-		Name = "HelloFirstTerraform"
+		Name = "FirstTerraformCloud"
 	}
 
 	user_data = <<EOF
