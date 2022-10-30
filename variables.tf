@@ -1,6 +1,6 @@
 variable "access_key" {}
 variable "secret_key" {}
 variable "tag_name" {
-    default = "TerraformCloud_20220918"
+    default = "TerraformCloud_20221030"
 }
 
