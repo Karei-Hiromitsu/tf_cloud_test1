@@ -14,7 +14,7 @@ resource "aws_instance" "Karei" {
 	instance_type = "t2.micro"
 	tags = {
 		Name = var.tag_name
-		ID_Number = var.id_number
+		ID_Number = var.tag_id_number
 	}
 
 	user_data = <<EOF
