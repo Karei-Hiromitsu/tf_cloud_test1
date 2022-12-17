@@ -77,7 +77,8 @@ echo 'sudo sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/s
 echo 'sudo systemctl daemon-reload' | tee -a /tmp/work/minikube_memo.txt
 echo 'sudo systemctl enable cri-docker.service' | tee -a /tmp/work/minikube_memo.txt
 echo 'sudo systemctl enable --now cri-docker.socket' | tee -a /tmp/work/minikube_memo.txt
-echo 'minikube start --vm-driver=none' | tee -a /tmp/work/minikube_memo.txt
+# echo 'minikube start --vm-driver=none' | tee -a /tmp/work/minikube_memo.txt
+echo 'minikube start --vm-driver=none --kubernetes-version=v1.23.0' | tee -a /tmp/work/minikube_memo.txt
 echo 'sudo ln -s `find /var/lib/minikube/binaries/ -name kubeadm` /usr/sbin/' | tee -a /tmp/work/minikube_memo.txt
 
 chmod +x /tmp/work/minikube_memo.txt
