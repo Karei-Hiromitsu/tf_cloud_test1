@@ -29,8 +29,6 @@ amazon-linux-extras install -y docker
 systemctl start docker
 systemctl enable docker
 
-usermod -a -G docker ec2-user
-usermod -a -G docker ssm-user
 
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 chmod +x ./minikube && mv -f ./minikube /usr/bin/
@@ -82,6 +80,9 @@ echo 'minikube start --vm-driver=none --kubernetes-version=v1.23.0' | tee -a /tm
 echo 'sudo ln -s `find /var/lib/minikube/binaries/ -name kubeadm` /usr/sbin/' | tee -a /tmp/work/minikube_memo.txt
 
 chmod +x /tmp/work/minikube_memo.txt
+
+usermod -a -G docker ec2-user
+usermod -a -G docker ssm-user
 EOF
 }
 
