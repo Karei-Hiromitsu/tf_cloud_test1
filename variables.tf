@@ -1,6 +1,9 @@
 variable "access_key" {}
 variable "secret_key" {}
 variable "tag_name" {
-    default = "TerraformCloud_20221030-1"
+    default = "Karei_tf_cloud_test1"
+}
+variable "tag_id_number" {
+    default = "00113971"
 }
 
